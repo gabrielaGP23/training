@@ -1,5 +1,5 @@
-using {Base} from './commom';
-namespace trainingcf.user;
+using {Base} from './common';
+namespace training.user;
 
 entity TblUser: Base{
     name: String(100);

@@ -1,7 +1,7 @@
-using {Base} from './commom';
-using {trainingcf.user.TblUser} from './user';
+using {Base, STATUS_TYPE} from './common';
+using {training.user.TblUser} from './user';
 
-namespace trainingcf.clients;
+namespace training.clients;
 
 entity TblClient: Base{
     name: String(100);

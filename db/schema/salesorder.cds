@@ -1,17 +1,18 @@
-using {Base} from './commom';
-using {trainingcf.products.TblProducts} from './products';
-using {trainingcf.user.TblUser} from './user';
-using {trainingcf.clients.TblClient} from './clients';
-namespace trainingcf.salesorder;
+using {Base, STATUS_TYPE} from './common';
+using {training.products.TblProducts} from './products';
+using {training.user.TblUser} from './user';
+using {training.clients.TblClient} from './clients';
+
+namespace training.salesorder;
 
 entity TblSalesOrder: Base{
-    status: String(1);
+    status: STATUS_TYPE;
     user: Association to TblUser;
     client: Association to TblClient;
 }
 
 entity TblSalesOrderItem: Base{
-    status: String(1);
+    status: STATUS_TYPE;
     salesOrder: Association to TblSalesOrder;
-    product: Association to TblProducts;
+    products: Association to TblProducts;
 }

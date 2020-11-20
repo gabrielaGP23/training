@@ -1,5 +1,5 @@
-using {Base, temporal} from './commom';
-namespace trainingcf.products;
+using {Base, temporal} from './common';
+namespace training.products;
 
 entity TblProducts: Base, temporal{
     name: String(100);
